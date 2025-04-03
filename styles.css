@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+body {
+  font-family: 'Orbitron', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--eva-dark);
+  color: #fff;
+}
+
+header {
+  background: var(--eva-purple);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+  border-bottom: 3px solid var(--eva-green);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.logo img {
+  height: 150px;
+  margin-right: 15px;
+}
+
+.logo::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 2px solid var(--eva-green);
+  clip-path: polygon(0 15%, 15% 0, 85% 0, 100% 15%, 100% 85%, 85% 100%, 15% 100%, 0 85%);
+  pointer-events: none;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: var(--eva-green);
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: var(--eva-orange);
+}
+
+main {
+  padding: 20px;
+}
+
+.popular-books, .catalog {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.book, .book-details {
+  background: #2a2a2a;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 250px;
+  border: 1px solid var(--eva-purple);
+  transition: transform 0.3s;
+}
+
+.book:hover {
+  transform: scale(1.05);
+  border-color: var(--eva-green);
+}
+
+.book img, .book-details img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.book a, .book button {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 5px 10px;
+  background: #333;
+  color: white;
+  text-decoration: none;
+  border-radius: 3px;
+}
+
+.book a:hover, .book button:hover {
+  background: #555;
+}
+
+.book-details {
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.book-details button {
+  width: 100%;
+  padding: 10px;
+  background: #333;
+  color: white;
+  font-size: 16px;
+  border: none;
+}
+
+.book button, .book-details button, .contact-form button {
+  background: var(--eva-purple);
+  color: var(--eva-green);
+  border: 2px solid var(--eva-green);
+  font-family: 'Orbitron', sans-serif;
+  text-transform: uppercase;
+  transition: all 0.3s;
+}
+
+.book button:hover, .book-details button:hover, .contact-form button:hover {
+  background: var(--eva-green);
+  color: var(--eva-dark);
+}
+
+.contact {
+  padding: 20px;
+}
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+.contact-form button {
+  padding: 10px;
+  background: #333;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.contact-form button:hover {
+  background: #555;
+}
+
+.cart-page {
+  max-width: 800px;
+  margin: 20px auto;
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.about-page {
+  max-width: 800px;
+  margin: 20px auto;
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.popular-books .book-list {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+  overflow-x: auto;
+}
+
+.footer-content {
+  background: var(--eva-purple);
+  color: white;
+  padding: 20px;
+  text-align: center;
+  border-top: 3px solid var(--eva-green);
+}
+.footer-content p {
+  margin: 5px 0;
+}
+.social-icons {
+  margin-top: 10px;
+}
+.social-icons a {
+  margin: 0 5px;
+  display: inline-block;
+}
+.social-icons img {
+  width: 20px;
+  height: 20px;
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+  nav ul {
+    padding: 0;
+  }
+  nav ul li {
+    display: block;
+    margin: 10px 0;
+  }
+  .popular-books, .catalog {
+    flex-direction: column;
+    align-items: center;
+  }
+  .banner::before {
+    font-size: 80px;
+  }
+}
+
+:root {
+  --eva-purple: #6f2288;
+  --eva-green: #00ff00;
+  --eva-orange: #ff6b00;
+  --eva-dark: #1a1a1a;
+}
