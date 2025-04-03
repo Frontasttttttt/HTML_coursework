@@ -142,19 +142,29 @@ main {
 .contact {
   padding: 20px;
 }
+
 .contact-form {
+  background: var(--eva-purple);
   display: flex;
   flex-direction: column;
   gap: 10px;
   max-width: 500px;
   margin: 0 auto;
+  padding: 20px;
+  border: 2px solid var(--eva-green);
+  border-radius: 5px;
+  color: white;
 }
+
 .contact-form input,
 .contact-form textarea {
   padding: 10px;
-  border: 1px solid #ccc;
+  border: 2px solid var(--eva-green);
   border-radius: 3px;
+  background: var(--eva-dark);
+  color: white;
 }
+
 .contact-form button {
   padding: 10px;
   background: #333;
@@ -163,6 +173,7 @@ main {
   border-radius: 3px;
   cursor: pointer;
 }
+
 .contact-form button:hover {
   background: #555;
 }
@@ -170,19 +181,23 @@ main {
 .cart-page {
   max-width: 800px;
   margin: 20px auto;
-  background: white;
+  background: var(--eva-dark);
   padding: 20px;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  color: white;
+  border: 2px solid var(--eva-green);
 }
 
 .about-page {
   max-width: 800px;
   margin: 20px auto;
-  background: white;
+  background: var(--eva-dark);
   padding: 20px;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  color: white;
+  border: 2px solid var(--eva-green);
 }
 
 .popular-books .book-list {
